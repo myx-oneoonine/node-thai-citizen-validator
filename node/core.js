@@ -3,35 +3,43 @@
 var assert = require('assert')
 
 function validator(citizenId) {
+    if (validateCitizenIDPattern(citizenId)) {
 
-    return validateCommon(citizenId);
-}
+        let result = 11 - sumArrayMultipliedByPosition(citizenId) % 11
+        result = result === 11 ? 1 : result
 
-function validateCommon(citizenId) {
-
-    if (citizenId.match('(^\\d{13}$)')) {
-        summaryOfArrayMultipliedByPosition(citizenId)
-        return true
+        return result == citizenId.substring(12)
     }
     else
         return false
 }
 
+function validateCitizenIDPattern(citizenId) {
+
+    return citizenId.match('(^\\d{13}$)')
+}
+
 function sumArrayMultipliedByPosition(citizenId) {
 
     let result = 0
-    let multiplied = 12
-    
-    Array.from(citizenId).forEach((element) => {
+    let multiplied = 13
+
+    Array.from(citizenId.substring(0, 12)).forEach((element) => {
         result += element * multiplied
+        // console.log(`${element} * ${multiplied} = ${element * multiplied}`)
         multiplied--
     })
-
+    // console.log(result)
     return result
 }
 
 
+
 if (!global.is_checking) {
+    assert.equal(sumArrayMultipliedByPosition('1239900124231'), 285, "sumArray 1")
+    assert.equal(sumArrayMultipliedByPosition('1559900050472'), 350, "sumArray 2")
+    assert.equal(sumArrayMultipliedByPosition('1234567890121'), 352, "sumArray 3")
+
     assert.equal(validator('1239900124231'), true, "1. best case 01")
     assert.equal(validator('1239900124232'), false, "2. last number notmatch")
     assert.equal(validator('123990012423'), false, "3. length < 13")
