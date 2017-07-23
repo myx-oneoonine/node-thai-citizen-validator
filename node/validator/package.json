@@ -1,6 +1,6 @@
 {
   "name": "thai-citizen-validator",
-  "version": "1.0.2",
+  "version": "1.1",
   "description": "thai citizen validator",
   "main": "core.js",
   "devDependencies": {},
@@ -8,6 +8,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/myx4play/thai-citizen-validator/tree/master/node"
+    "url": "https://github.com/myx4play/thai-citizen-validator/tree/master/node/validator"
   }
 }
