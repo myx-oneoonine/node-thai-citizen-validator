@@ -1,15 +1,13 @@
 {
   "name": "thai-citizen-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "thai citizen validator",
   "main": "core.js",
-  "dependencies": {
-    "assert": "^1.4.1"
-  },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT"
+  "author": "myx4play",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myx4play/thai-citizen-validator/tree/master/node"
+  }
 }
