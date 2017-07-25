@@ -1,13 +1,23 @@
 {
   "name": "thai-citizen-validator",
-  "version": "1.1.0",
-  "description": "thai citizen validator",
+  "version": "1.1.2",
+  "description": "Thai CitizenId Validator",
   "main": "core.js",
+  "dependencies": {
+    "thai-citizen-generator": "^1.0.0"
+  },
   "devDependencies": {},
-  "author": "myx4play",
-  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/myx4play/thai-citizen-validator/tree/master/node/validator"
-  }
+    "url": "git+https://github.com/myx4play/thai-citizen-validator.git"
+  },
+  "author": "myx4play",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myx4play/thai-citizen-validator/issues"
+  },
+  "homepage": "https://github.com/myx4play/thai-citizen-validator#readme"
 }
