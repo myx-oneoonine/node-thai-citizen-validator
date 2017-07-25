@@ -1,4 +1,4 @@
-let thaiCitizenValidator = require('../node/core.js')
+let thaiCitizenValidator = require('../validator/core.js')
 // let thaiCitizenValidator = require('thai-citizen-validator')
 let assert = require('assert')
 
@@ -17,6 +17,7 @@ if (!global.is_checking) {
     assert.equal(thaiCitizenValidator('123990012423a'), false, "5. is not numeric")
     assert.equal(thaiCitizenValidator(''), false, "6. empty input")
     assert.equal(thaiCitizenValidator('1234567890121'), true, "6. best case ,after minus with 11 result >= 10")
+    assert.equal(thaiCitizenValidator('8199292747830'), true, "bug last number is 10")
 
     console.log('Passed')
 }
