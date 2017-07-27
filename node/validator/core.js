@@ -2,7 +2,7 @@
 
 let thaiCitizenId = require('thai-citizen-generator')
 
-module.exports = (citizenId) => {
+let validate = (citizenId) => {
 
     if (validateCitizenIDPattern(citizenId)) {
 
@@ -18,6 +18,26 @@ function validateCitizenIDPattern(citizenId) {
 }
 
 
+Object.defineProperty(String.prototype, 'isThaiCitizenId', {
+    enumerable: false,
+    value: function() {
+        console.log(`citizenId is ${'' + this}`)
+        return validate(this)
+    }
 
+    // value: ()=> {
+    //     console.log(`citizenId is ${'' + this}`)
+    //     return validate(this)
+    // }
+})
 
+// Object.defineProperties(String.prototype, {
+//     isThaiCitizenId: {
+//         value: function () {
+//             return validate(this)
+//         }
+//     }
+// })
+
+module.exports = validate
 
