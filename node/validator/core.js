@@ -2,10 +2,8 @@
 
 let thaiCitizenId = require('thai-citizen-generator')
 
-module.exports = (citizenId) => {
-
+let validate = (citizenId) => {
     if (validateCitizenIDPattern(citizenId)) {
-
         return thaiCitizenId.generateLastNumber(citizenId.substring(0, 12)) == citizenId.substring(12)
     }
     else
@@ -13,11 +11,14 @@ module.exports = (citizenId) => {
 }
 
 function validateCitizenIDPattern(citizenId) {
-
     return citizenId.match('(^\\d{13}$)')
 }
 
+Object.defineProperty(String.prototype, 'isThaiCitizenId', {
+    enumerable: false,
+    value: function () { return validate(this) }
 
+})
 
-
+module.exports = validate
 

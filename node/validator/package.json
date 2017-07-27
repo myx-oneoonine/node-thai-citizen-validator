@@ -1,6 +1,6 @@
 {
   "name": "thai-citizen-validator",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Thai CitizenId Validator",
   "main": "core.js",
   "dependencies": {
