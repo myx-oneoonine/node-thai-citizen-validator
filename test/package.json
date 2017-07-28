@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "thai-citizen-validator": "1.2.0"
+    "thai-citizen-validator": "^1.2.0"
   }
 }
