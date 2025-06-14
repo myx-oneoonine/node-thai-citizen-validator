@@ -6,9 +6,16 @@
   "dependencies": {
     "thai-citizen-generator": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "prettier": "^3.5.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js",
+    "lint": "eslint *.js test/*.js",
+    "lint:fix": "eslint *.js test/*.js --fix",
+    "format": "prettier --write *.js test/*.js",
+    "format:check": "prettier --check *.js test/*.js"
   },
   "repository": {
     "type": "git",
