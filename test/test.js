@@ -1,4 +1,4 @@
-let thaiCitizenValidator = require('../validator/core.js')
+let thaiCitizenValidator = require('../core.js')
 // let thaiCitizenValidator = require('thai-citizen-validator')
 let assert = require('assert')
 
